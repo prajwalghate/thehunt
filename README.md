@@ -6,12 +6,25 @@ Project consists **TreasureHunt.sol** contract in src folder along with its test
 $ forge test --match-path test/TreasureHunt.t.sol -vvv
 ```
 
-
 ## Deploy to Fork (Can replace rpc with any chain rpc)
 
 ```shell
 $ forge script script/DeployTreasureHunt.s.sol:DeployTreasureHunt --rpc-url http://127.0.0.1:3000/ --broadcast -vvv --legacy --slow
 ```
+
+## Scripts
+  Join the Game
+```shell
+$ forge script script/Join.s.sol:Join --rpc-url http://127.0.0.1:3000/ --broadcast -vvv --legacy --slow
+```
+Move the Position
+```shell
+$ forge script script/Move.s.sol:Move --rpc-url http://127.0.0.1:3000/ --broadcast -vvv --legacy --slow
+```
+
+## Deployment
+The code is deployed on sepolia testnet, can find it here
+https://sepolia.etherscan.io/address/0x222c21111ddde68e6eac2fcde374761e72c45ffe
 
 ## About Game
 ### Randomness:
