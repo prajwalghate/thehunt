@@ -1,66 +1,17 @@
-## Foundry
+Project consists **TreasureHunt.sol** contract in src folder along with its tester contract.
+The randomness is handled using the keccak256 hash function combined with various sources including block number , timpestamp and address.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
+### Test Using following command
 
 ```shell
-$ forge build
+$ forge test --match-path test/TreasureHunt.t.sol -vvv
 ```
 
-### Test
+
+### Deploy to Fork (Can replace rpc with any chain rpc)
 
 ```shell
-$ forge test
+$ forge script script/DeployTreasureHunt.s.sol:DeployTreasureHunt --rpc-url http://127.0.0.1:3000/ --broadcast -vvv --legacy --slow
 ```
 
-### Format
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
